@@ -5,8 +5,9 @@ const { prompt } = require("inquirer")
 const { hostname } = require("os")
 const fetch = require("node-fetch")
 const serverDomain = process.argv[2] || "https://api-freeboxnotifier.vercel.app"
-console.log(serverDomain)
-async function main() {
+console.log(`API: ${serverDomain}\n`)
+
+async function main(){
 	// Afficher le message d'accueil
 	console.log("Bienvenue dans l'assistant de configuration de Freebox Call Notifier.")
 	console.log("Cet assistant vous aidera à authentifier notre service auprès de votre Freebox. Vous devrez être connecté au réseau WiFi de votre Freebox pour continuer.")
