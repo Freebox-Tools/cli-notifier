@@ -1,11 +1,24 @@
 {
-  "name": "cli-notifier",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "el2zay",
-  "license": "MIT"
+	"name": "freebox-notifier-cli",
+	"version": "1.0.0",
+	"description": "CLI permettent d'associer une Freebox au bot Call Notifier",
+	"main": "index.js",
+	"bin": {
+		"freebox-notifier-cli": "index.js",
+		"fbx-associate": "index.js"
+	},
+	"author": "el2zay",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Freebox-Tools/cli-notifier.git"
+	},
+	"dependencies": {
+		"freebox-wrapper": "^1.0.1",
+		"inquirer": "8.2.6",
+		"node-fetch": "2.6.7"
+	},
+	"devDependencies": {
+		"eslint": "8.50.0"
+	}
 }
