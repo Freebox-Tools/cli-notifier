@@ -41,12 +41,21 @@ async function main(){
 	}
 
 	// Log
-	console.log("Envoi des informations au serveur de Call Notifier...")
+	console.log("Envoi des informations au serveur de Call Notifier :")
+	console.log(JSON.stringify({
+		appToken: register.appToken,
+		apiDomain: register.apiDomain,
+		httpsPort: register.httpsPort
+	}))
 
 	// Demander un code d'association à l'API
 	var code = await fetch(`${serverDomain}/associateBoxWithTelegram`, {
 		method: "POST",
-		body: JSON.stringify(register.appToken, register.apiDomain, register.httpsPort),
+		body: JSON.stringify({
+			appToken: register.appToken,
+			apiDomain: register.apiDomain,
+			httpsPort: register.httpsPort
+		}),
 		headers: { "Content-Type": "application/json" }
 	}).then(res => res.text())
 
@@ -57,10 +66,10 @@ async function main(){
 	}
 
 	// Si on a une erreur, on l'affiche
-	if(!code?.success || !code?.code) console.log("Une erreur est survenue lors de la récupération du code d'association :", code?.message || code?.error || code?.statusCode || code)
+	if(!code?.success || !code?.code) return console.log("Une erreur est survenue lors de la récupération du code d'association :", code?.message || code?.error || code?.statusCode || code)
 
 	// On affiche le code d'association en gras
-	console.log("Code d'association : ", "\x1b[1m%s\x1b[0m", `${code.code}`)
+	console.log("Code d'association :", code.code)
 	console.log("Veuillez vous rendre sur Telegram et envoyer un message au bot contenant ce code pour terminer le processus d'association.")
 }
 main()
