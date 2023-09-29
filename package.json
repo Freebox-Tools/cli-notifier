@@ -14,7 +14,7 @@
 		"url": "https://github.com/Freebox-Tools/cli-notifier.git"
 	},
 	"dependencies": {
-		"freebox-wrapper": "^1.0.1",
+		"freebox-wrapper": "^1.0.2",
 		"inquirer": "8.2.6",
 		"node-fetch": "2.6.7"
 	},
