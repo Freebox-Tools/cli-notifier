@@ -2,7 +2,6 @@
 
 var { RegisterFreebox } = require("freebox-wrapper")
 const { prompt } = require("inquirer")
-const { hostname } = require("os")
 const fetch = require("node-fetch")
 const serverDomain = process.argv[2] || "https://api-freeboxnotifier.vercel.app"
 console.log(`API: ${serverDomain}\n`)
@@ -31,7 +30,7 @@ async function main(){
 		appId: "fbx.notifier",
 		appName: "Call Notifier",
 		appVersion: "1.0.0",
-		deviceName: hostname() || "le CLI"
+		deviceName: "le CLI"
 	})
 
 	// On vérifie les informations
