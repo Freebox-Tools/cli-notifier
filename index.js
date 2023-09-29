@@ -61,6 +61,6 @@ async function main(){
 
 	// On affiche le code d'association en gras
 	console.log("Code d'association : ", "\x1b[1m%s\x1b[0m", `${code.code}`)
-	console.log("Veuillez vous rendre sur Telegram et envoyer un message contenant ce code pour terminer le processus d'association.")
+	console.log("Veuillez vous rendre sur Telegram et envoyer un message au bot contenant ce code pour terminer le processus d'association.")
 }
 main()
