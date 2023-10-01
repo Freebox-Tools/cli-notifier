@@ -68,7 +68,7 @@ async function main(){
 	if(!code?.success || !code?.code) return console.log("Une erreur est survenue lors de la récupération du code d'association :", code?.message || code?.error || code?.statusCode || code)
 
 	// On affiche le code d'association en gras
-	console.log("Code d'association :", code.code)
+	console.log("\nCode d'association :", code.code)
 	console.log("Veuillez vous rendre sur Telegram et envoyer un message au bot contenant ce code pour terminer le processus d'association.")
 }
 main()
