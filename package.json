@@ -7,6 +7,14 @@
 		"freebox-notifier-cli": "index.js",
 		"fbx-associate": "index.js"
 	},
+	"keywords": [
+		"freebox",
+		"freeboxos",
+		"cli",
+		"tui",
+		"notifier",
+		"call"
+	],
 	"author": "el2zay",
 	"license": "MIT",
 	"repository": {
