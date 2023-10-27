@@ -40,11 +40,10 @@ async function main(){
 	}
 
 	// Log
-	console.log("Envoi des informations au serveur de Call Notifier :")
-	console.log(JSON.stringify({
-		appToken: register.appToken,
-		apiDomain: register.apiDomain,
-		httpsPort: register.httpsPort
+	console.log("Envoi des informations au serveur de Call Notifier :", JSON.stringify({
+		appToken: register?.appToken,
+		apiDomain: register?.apiDomain,
+		httpsPort: register?.httpsPort
 	}))
 
 	// Demander un code d'association à l'API
@@ -69,6 +68,7 @@ async function main(){
 
 	// On affiche le code d'association en gras
 	console.log("\nCode d'association :", code.code)
-	console.log("Veuillez vous rendre sur Telegram et envoyer un message au bot contenant ce code pour terminer le processus d'association.")
+	console.log("\nInstructions d'associations :\n• Pour Telegram        envoyer un message au bot avec uniquement ce code pour terminer le processus d'association.\n• Pour Discord         exécuter la commande \"/callnotifier link\" en message privé et utiliser le bouton \"Saisir le code\"")
+	console.log("\nLiens des bots :\n• Pour Telegram        https://t.me/freebox_call_notifier_bot\n• Pour Discord         https://discord.gg/SWkh4mk")
 }
 main()
